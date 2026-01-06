@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nene's Details | Syracuse NY Mobile Detailing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://i.imgur.com/VJZoe4T.png">
+  <style>
+    :root{--red:#c8102e;--gold:#ffb81c;--black:#111;--white:#fff;--light:#f5f5f5;}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--light);color:var(--black);}
+    header{background:var(--black);color:var(--white);padding:1.2rem 1rem;text-align:center;position:relative;}
+    header h1{font-size:2rem;text-transform:uppercase;letter-spacing:2px;}
+    header span{color:var(--gold);}
+    nav{margin-top:.5rem;}
+    nav a{color:var(--white);margin:0 .75rem;text-decoration:none;font-weight:bold;}
+    .tag{position:absolute;top:8px;right:12px;font-size:.75rem;background:var(--gold);color:var(--black);padding:2px 6px;border-radius:3px;}
+    .hero{background:var(--red);color:var(--white);padding:4rem 1rem;text-align:center;}
+    .hero h2{font-size:2.2rem;margin-bottom:1rem;}
+    .btn{background:var(--gold);color:var(--black);padding:.75rem 1.5rem;border:none;font-size:1rem;font-weight:bold;cursor:pointer;display:inline-block;margin-top:1rem;text-decoration:none;}
+    .section{padding:3rem 1rem;max-width:1100px;margin:auto;}
+    .section h3{font-size:1.8rem;margin-bottom:1.5rem;color:var(--red);text-align:center;}
+    .grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+    .pkg{background:var(--white);border:2px solid var(--black);padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;}
+    .pkg h4{font-size:1.3rem;margin-bottom:.5rem;color:var(--black);}
+    .tier{font-size:1.1rem;font-weight:bold;color:var(--red);}
+    .price{font-size:1.6rem;margin:.5rem 0;color:var(--black);}
+    ul{list-style:none;padding-left:0;margin:.75rem 0 auto;}
+    li{margin:.25rem 0;}
+    li::before{content:"✓ ";color:var(--gold);font-weight:bold;margin-right:.25rem;}
+    /* dark-mode fix */
+    body.dark{background:#111;color:#eee;} 
+    body.dark .pkg{background:#222;border-color:#444;}
+    body.dark .price{color:var(--gold);}
+    /* sticky book bar */
+    .btn-book{position:fixed;bottom:0;left:0;right:0;z-index:99;}
+    /* portfolio gallery */
+    .gallery{display:flex;gap:1rem;overflow-x:auto;}
+    .gallery img{height:200px;border:2px solid var(--black);}
+    /* reviews carousel */
+    #rc{display:flex;transition:.5s;}
+    blockquote{font-size:1.2rem;font-style:italic;margin:1rem 0;}
+    /* WhatsApp bubble */
+    .wa{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:12px 16px;border-radius:50px;box-shadow:0 4px 8px rgba(0,0,0,.3);z-index:100;}
+    /* print */
+    @media print{header .tag,nav,footer,.wa{display:none}.pkg{border:1px solid #000;margin:8px 0;padding:8px}}
+    /* lazy-load */
+    img[loading="lazy"]{min-height:200px;background:#ddd;}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="tag">MOBILE DETAILING</div>
+  <h1>Nene's <span>Details</span></h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#booking">Book</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Interior & Exterior Specialists – Syracuse</h2>
+  <p>We come to you! Premium products, fair prices, 100% satisfaction.</p>
+  <button class="btn" onclick="document.body.classList.toggle('dark')">🌙 Toggle Dark</button><br>
+  <a class="btn" href="#booking">Get Quote</a>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section" itemscope itemtype="https://schema.org/Service">
+  <h3>Packages & Prices</h3>
+  <div class="grid">
+    <div class="pkg" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Offer">
+      <h4>Interior Only</h4>
+      <div class="tier">Basic</div>
+      <div class="price" itemprop="price">80</div><meta itemprop="priceCurrency" content="USD">
+      <ul><li>Complete vacuum</li><li>Dash & console wipe</li><li>Window polish</li><li>Trash removal</li></ul>
+    </div>
+    <div class="pkg"><h4>Interior Only</h4><div class="tier">Premium</div><div class="price">150</div><ul><li>All Basic +</li><li>Shampoo carpets & seats</li><li>Leather conditioning</li><li>Odor-enzyme treatment</li></ul></div>
+    <div class="pkg"><h4>Exterior Only</h4><div class="tier">Basic</div><div class="price">70</div><ul><li>Hand wash & dry</li><li>Tire/wheel clean</li><li>Spray wax sealant</li><li>Windows polished</li></ul></div>
+    <div class="pkg"><h4>Exterior Only</h4><div class="tier">Premium</div><div class="price">140</div><ul><li>All Basic +</li><li>High-gloss sealant</li><li>1-yr ceramic spray coating</li><li>Plastic trim dressing</li></ul></div>
+    <div class="pkg"><h4>Interior & Exterior</h4><div class="tier">Basic</div><div class="price">130</div><ul><li>All Basic Interior</li><li>All Basic Exterior</li><li>Free air-freshener</li></ul></div>
+    <div class="pkg"><h4>Interior & Exterior</h4><div class="tier">Premium</div><div class="price">260</div><ul><li>All Premium Interior</li><li>All Premium Exterior</li><li>Final touchless blow-dry</li></ul></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+  <h3>Products & Tools We Use</h3>
+  <ul>
+    <li>3D Pink pH-neutral shampoo – safe for wax & ceramic layers</li>
+    <li>Koch-Chemie Gentle Snow – ultra-slick touch-wash soap</li>
+    <li>PS Brake Buster – iron & brake-dust remover (acid-free)</li>
+    <li>CarPro Reload spray sealant – 6-month hydrophobic shield</li>
+    <li>3D LVP Dressing – UV block for plastic & trim (non-greasy)</li>
+    <li>PS Carpet Bomber – enzyme cleaner for seats & rugs</li>
+    <li>McKee’s 37 Leather Guard – conditions without shine or slip</li>
+    <li>Odor-Smoke Bomb – enzyme odor eliminator (not perfume cover-up)</li>
+    <li>Metro Master-blaster – warm, filtered touchless blow-dry</li>
+    <li>HEPA wet/dry vac & soft-tip interior tools – no scratches</li>
+  </ul>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+  <h3>Before & After Gallery</h3>
+  <div class="gallery">
+    <a href="https://i.imgur.com/b4Jh5XH.jpg" class="gal"><img loading="lazy" src="https://i.imgur.com/b4Jh5XHb.jpg" alt="Before"></a>
+    <a href="https://i.imgur.com/UkZqH3A.jpg" class="gal"><img loading="lazy" src="https://i.imgur.com/UkZqH3Ab.jpg" alt="After"></a>
+  </div>
+  <p style="text-align:center;margin-top:1rem;">Tap photos to enlarge.  Send yours to be featured!</p>
+</section>
+
+<!-- REVIEWS -->
+<section class="section">
+  <h3>What Customers Say</h3>
+  <div id="rc"></div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="section">
+  <h3>Book Now</h3>
+  <p><a class="btn" href="tel:+16802070550">📞 Tap to Call: (680) 207-0550</a></p>
+  <p><a class="btn" href="mailto:cardetail60@gmail.com">✉ Email: cardetail60@gmail.com</a></p>
+  <p>Text or email: name, vehicle, package, preferred date — we reply within 30 min.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h3>Location & Hours</h3>
+  <p><strong>By appointment only</strong><br>Syracuse & surrounding areas — we come to you!</p>
+</section>
+
+<!-- WHATSAPP BUBBLE -->
+<a class="wa" href="https://wa.me/16802070550?text=Hi! I need a quote.">💬 WhatsApp</a>
+
+<!-- FOOTER -->
+<footer>
+  © <span id="y"></span> Nene's Details – Edit anything you see in this file.
+</footer>
+
+<!-- JAVASCRIPT EXTRAS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
+<script>
+  // lightbox gallery
+  document.querySelectorAll('.gal').forEach(el => el.addEventListener('click', e => {
+    e.preventDefault(); basicLightbox.create(`<img src="${el.href}">`).show();
+  }));
+  // auto year footer
+  document.getElementById('y').textContent = new Date().getFullYear();
+  // review carousel
+  const reviews = ["\"Looks brand new!\" – Mike","\"Best detail in Syracuse\" – Jess","\"Booking again next month\" – Al"];
+  let i = 0; const rc = document.getElementById('rc');
+  setInterval(() => { rc.innerHTML = `<figure style="text-align:center"><blockquote>${reviews[i]}</blockquote></figure>`; i = (i + 1) % reviews.length }, 4000);
+</script>
+</body>
+</html>
